@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.released
+    @movies = Movie.all
   end
 
   def show
@@ -16,7 +16,6 @@ class MoviesController < ApplicationController
     @movie.update(params.require(:movie).permit!)  
     redirect_to @movie
   end
-  
   def new
     @movie = Movie.new
   end
