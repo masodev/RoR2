@@ -2,9 +2,25 @@
     <header>
       <h2><%= @movie.title %></h2>
     </header>
-    <p>
-      <%= @movie.description %>
-    </p>
+      <h3>Cast</h3>
+        <p>
+          <%= @movie.cast %>
+        </p>
+
+      <h3>Director</h3> 
+        <p>
+          <%= @movie.director %>
+        </p>
+
+      <h3>Duration</h3>
+        <p>
+          <%= @movie.duration %>
+        </p>
+      <h3>Image</h3>
+        <%= image_tag(@movie.image_file_name) %>
+        <p>
+          <%= @movie.description %>
+      </p>
     <table>
       <tr>
         <th>Released:</th>
