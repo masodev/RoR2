@@ -11,4 +11,8 @@ class Review < ActiveRecord::Base
   message: "must be between 1 and 5"
   }
 
+  def average_stars
+  reviews.average(:stars)
+end
+  
 end
